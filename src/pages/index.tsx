@@ -1,5 +1,4 @@
 import { Flex, Divider, Heading } from "@chakra-ui/react";
-import type { NextPage } from "next";
 import { ContinentsSlider } from "../components/ContinentsSlider";
 import { CTA } from "../components/CTA";
 import { Hero } from "../components/Hero";
@@ -12,7 +11,7 @@ interface IPostInfo {
     data: {
       title: string;
       banner_url: string;
-      subtitle: string;
+      subtitle?: string;
     };
     slug: string;
     uid: string;
@@ -53,7 +52,7 @@ export const getStaticProps: GetStaticProps = async () => {
     data: {
       title: post.data.titulo_do_post[0].text,
       subtitle: post.data.subtitulo[0].text,
-      banner_url: post.data.banner_do_continente.url,
+      banner_url: post.data.banner_slider_home.url
     },
   }));
 

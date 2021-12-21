@@ -13,7 +13,7 @@ interface IContinentsSliderProps {
     data: {
       title: string;
       banner_url: string;
-      subtitle: string;
+      subtitle?: string;
     };
     slug: string;
     uid: string;
@@ -27,6 +27,7 @@ export const ContinentsSlider = ({ postsInfo }: IContinentsSliderProps) => {
         modules={[Navigation, Pagination]}
         slidesPerView={1}
         navigation
+        loop={true}
         pagination={{ clickable: true }}
       >
         {postsInfo.map((post) => (
