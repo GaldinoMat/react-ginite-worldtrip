@@ -1,5 +1,5 @@
-import { Flex } from "@chakra-ui/react"
-import { CTAListItem } from "./CTAListItem"
+import { Flex } from "@chakra-ui/react";
+import { CTAListItem } from "./CTAListItem";
 
 export const CTA = () => {
   return (
@@ -12,11 +12,11 @@ export const CTA = () => {
       justifyContent="space-between"
       color="gray.Headings"
     >
-      < CTAListItem text="vida noturna" />
-      < CTAListItem text="praia" />
-      < CTAListItem text="moderno" />
-      < CTAListItem text="clássico" />
-      < CTAListItem text="e mais..." last={true} />
+      <CTAListItem text="vida noturna" />
+      <CTAListItem text="praia" />
+      <CTAListItem text="moderno" />
+      <CTAListItem text="clássico" />
+      <CTAListItem text="e mais..." last={true} />
     </Flex>
-  )
-}
+  );
+};

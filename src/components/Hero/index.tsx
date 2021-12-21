@@ -1,8 +1,9 @@
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 export const Hero = () => {
   return (
-    <Box maxH={375}
+    <Box
+      maxH={375}
       py="7"
       px="4"
       color="white.HeroText"
@@ -17,5 +18,5 @@ export const Hero = () => {
         Chegou a hora de tirar do papel a viagem que você sempre sonhou.
       </Text>
     </Box>
-  )
-}
+  );
+};

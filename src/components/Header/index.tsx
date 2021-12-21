@@ -1,5 +1,5 @@
-import { Flex, Image } from "@chakra-ui/react"
-import Link from "next/link"
+import { Flex, Image } from "@chakra-ui/react";
+import Link from "next/link";
 
 export const Header = () => {
   return (
@@ -10,5 +10,5 @@ export const Header = () => {
         </a>
       </Link>
     </Flex>
-  )
-}
+  );
+};
