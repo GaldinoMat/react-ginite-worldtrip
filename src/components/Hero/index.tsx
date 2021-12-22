@@ -1,9 +1,10 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 export const Hero = () => {
   return (
-    <Box
-      maxH={375}
+    <Flex
+      w="100%"
+      h={[220, 300]}
       py="7"
       px="4"
       color="white.HeroText"
@@ -12,11 +13,26 @@ export const Hero = () => {
       backgroundPosition="center"
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
+      flexDirection={["column", "row"]}
+      justifyContent="center"
+      alignItems={["flex-start", "center"]}
     >
-      <Heading mb="5">5 continentes, infinitas possibilidades</Heading>
-      <Text color="gray.Text" fontSize="lg">
-        Chegou a hora de tirar do papel a viagem que você sempre sonhou.
-      </Text>
-    </Box>
+      <Box>
+        <Heading
+          mb="5"
+          fontWeight="500"
+          fontSize={["2xl", "4xl"]}
+          maxW="30rem"
+        >
+          5 Continentes, infinitas possibilidades.
+        </Heading>
+        <Text color="gray.Text" fontSize={["lg", "xl"]} maxW="35rem" fontWeight="400">
+          Chegou a hora de tirar do papel a viagem que você sempre sonhou.
+        </Text>
+      </Box>
+      <Box>
+        <Image src="Airplane.svg" alt="plane image" display={["none", "block"]} mt="5rem"/>
+      </Box>
+    </Flex>
   );
 };

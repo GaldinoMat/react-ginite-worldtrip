@@ -25,12 +25,25 @@ const Home = ({ postsInfo }: IPostInfo) => {
       <CTA />
       <Divider
         orientation="horizontal"
-        w="3.75rem"
+        w={["3.75rem", "5.625rem"]}
+        h=".125rem"
         bg="gray.Headings"
         opacity="1"
       />
-      <Heading textAlign="center" color="gray.Headings" mt="1.5rem">
-        Vamos nessa? Então escolha seu continente
+      <Heading
+        textAlign="center"
+        fontWeight="500"
+        color="gray.Headings"
+        mt="1.5rem"
+      >
+        Vamos nessa?
+      </Heading>
+      <Heading
+        textAlign="center"
+        fontWeight="500"
+        color="gray.Headings"
+      >
+        Então escolha seu continente
       </Heading>
       <ContinentsSlider postsInfo={postsInfo} />
     </Flex>
@@ -52,7 +65,7 @@ export const getStaticProps: GetStaticProps = async () => {
     data: {
       title: post.data.titulo_do_post[0].text,
       subtitle: post.data.subtitulo[0].text,
-      banner_url: post.data.banner_slider_home.url
+      banner_url: post.data.banner_slider_home.url,
     },
   }));
 

@@ -51,7 +51,7 @@ const Continent = ({ post }: IContinentProps) => {
     <Flex flexDirection="column">
       <Banner imageUrl={post.data.banner.post_image} title={post.data.title} />
       <Box px="1rem">
-        <Flex flexDirection="column">
+        <Flex flexDirection={["column", "row"]} >
           <TextContent content={post.data.content} />
           <Flex>
             <HStack spacing="10">

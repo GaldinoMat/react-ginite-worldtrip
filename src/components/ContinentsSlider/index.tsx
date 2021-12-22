@@ -22,7 +22,12 @@ interface IContinentsSliderProps {
 
 export const ContinentsSlider = ({ postsInfo }: IContinentsSliderProps) => {
   return (
-    <Box w="100%" my="1.25rem">
+    <Box
+      w="100%"
+      h={["18.75rem", "25rem"]}
+      my={["1.25rem", "3.25rem"]}
+      px={["0", "12rem"]}
+    >
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={1}
@@ -42,10 +47,11 @@ export const ContinentsSlider = ({ postsInfo }: IContinentsSliderProps) => {
                 backgroundSize="cover"
                 alignItems="center"
                 justifyContent="center"
+                h="100%"
               >
-                <Stack textAlign="center" color="white.HeroText">
-                  <Heading> {post.data.title} </Heading>
-                  <Text> {post.data.subtitle} </Text>
+                <Stack textAlign="center" color="white.HeroText" spacing={["2.5","4"]} >
+                  <Heading fontWeight="700" fontSize={["2xl", "5xl"]}> {post.data.title} </Heading>
+                  <Text fontWeight="700" fontSize={["lg", "xl"]}> {post.data.subtitle} </Text>
                 </Stack>
               </Flex>
             </Link>

@@ -8,13 +8,14 @@ interface IBannerProps {
 export const Banner = ({ imageUrl, title }: IBannerProps) => {
   return (
     <Flex
+      w="100%"
       backgroundImage={imageUrl}
-      height="9.375rem"
+      height={["9.375rem", "31.25rem"]}
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
       backgroundSize="contain"
-      alignItems="center"
-      justifyContent="center"
+      alignItems={["center", "flex-end"]}
+      justifyContent={["center", "flex-start"]}
     >
       <Heading color="white.HeroText" textAlign="center">
         {title}
